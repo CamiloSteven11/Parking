@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container-login {
+	position: relative;
+	height: 100vh;
+}
+
+.login-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	width: 300px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-control {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-primary:hover {
+	background-color: #45a049;
+}
+
+.background-image-login {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://img.freepik.com/vector-gratis/ilustracion-aparcamiento-coches_1284-10441.jpg?w=740&t=st=1706570855~exp=1706571455~hmac=ae38035b76fc3a1bb2e0aec50a2dc5c385e87661f26050f1f0c494bc36745ef4');
+	background-size: cover;
+	background-position: center;
+	filter: brightness(50%);
+	z-index: -1;
+}
+h2{
+    text-align: center;
+}

@@ -1,0 +1,61 @@
+<div class="background-image custom-background">
+    <button (click)="redirect()" class="back-button">
+        VOLVER
+    </button>
+</div>
+
+<div class="container">
+    <div class="inner-container">
+
+        <div class="input-search">
+            <i class="fa fa-search form-control-feedback"></i>
+            <input type="text" class="form-control input-search-background" (keyup)="applyFilter($event)"
+                placeholder="Buscar por placa, hora ingreso, hora salida ...">
+        </div>
+        <div class="table-container">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="tipoVehiculo">
+                    <th mat-header-cell *matHeaderCellDef> Tipo de Vehiculo </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tipoVehiculo}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="placa">
+                    <th mat-header-cell *matHeaderCellDef> Placa </th>
+                    <td mat-cell *matCellDef="let element"> {{element.placa}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="imagen">
+                    <th mat-header-cell *matHeaderCellDef> Imagen </th>
+                    <td mat-cell *matCellDef="let element">
+                        <img [src]="element.imagen" alt="Vehicle Image" width="24" height="24">
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="horaIngreso">
+                    <th mat-header-cell *matHeaderCellDef> Hora Ingreso </th>
+                    <td mat-cell *matCellDef="let element"> {{element.horaIngreso}} </td>
+                </ng-container>
+                <ng-container matColumnDef="horaSalida">
+                    <th mat-header-cell *matHeaderCellDef> Hora Salida </th>
+                    <td mat-cell *matCellDef="let element"> {{element.horaSalida}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="valorPagado">
+                    <th mat-header-cell *matHeaderCellDef> Valor Pagado </th>
+                    <td mat-cell *matCellDef="let element"> {{element.valorPagado | currency:'':'symbol':'1.0-0'}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="tiempoTotal">
+                    <th mat-header-cell *matHeaderCellDef> Tiempo Total </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{ calculateTotalTime(element.horaIngreso, element.horaSalida) }}
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+    </div>
+</div>

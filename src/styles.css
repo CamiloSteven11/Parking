@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.background-image {
+    background-image: url('https://img.freepik.com/vector-gratis/ilustracion-aparcamiento-coches_1284-10441.jpg?w=740&t=st=1706570855~exp=1706571455~hmac=ae38035b76fc3a1bb2e0aec50a2dc5c385e87661f26050f1f0c494bc36745ef4');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.custom-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Ajusta el z-index */
+}
+
+.back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 15px;
+    color: red;
+    z-index: 1;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+.back-button:hover {
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+}
+
+@media only screen and (max-width: 767px) {
+    .background-image {
+        background-image: none;
+        /* Eliminar la imagen de fondo en dispositivos móviles */
+        background-color: #104829;
+        /* Cambiar a tu color deseado */
+    }
+}

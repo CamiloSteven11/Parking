@@ -1,0 +1,85 @@
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    padding-top: 30px;
+}
+
+.card {
+    min-width: 18rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ccc;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.card img {
+    max-height: 300px;
+    min-width: 18rem;
+    min-height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+    .container{
+        padding: 0%;
+        margin: 0%;
+        margin-left: -9px;
+    }
+  }
